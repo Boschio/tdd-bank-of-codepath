@@ -52,7 +52,7 @@ export function TransactionRow({ transaction = {} }) {
 
 export function TransferRow({ transfer = {} }) {
   return (
-    <div className="table-row transfer-row">
+    <Link to={`/transfers/${transfer.id}`} className="table-row transfer-row" >
       <span className="col x4">
         <Arrow amount={transfer.amount} />
         {transfer.memo}
@@ -60,7 +60,7 @@ export function TransferRow({ transfer = {} }) {
       <span className="col x2">{transfer.recipientEmail}</span>
       <span className="col x2">{formatAmount(transfer.amount)}</span>
       <span className="col x15">{formatDate(transfer.postedAt)}</span>
-    </div>
+    </Link>
   )
 }
 

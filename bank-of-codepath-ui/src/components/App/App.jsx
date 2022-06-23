@@ -35,6 +35,9 @@ export default function App() {
                 isCreating={isCreating} setIsCreating={setIsCreating}
               /> }/>
 
+            <Route path="/transactions/:transactionId"
+              element={ <TransactionDetail />} />
+
           </Routes>
         
         </main>
